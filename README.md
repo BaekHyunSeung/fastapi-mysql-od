@@ -130,29 +130,3 @@ irm "http://127.0.0.1:8000/save-od" -Method Post -ContentType "application/json"
 {"status":"success","id":1}
 ```
 
-## 13) 자주 발생하는 오류/해결
-
-### 13-1) `Import "sqlalchemy.orm" could not be resolved`
-- venv에 `sqlalchemy`가 없거나 IDE가 venv를 못 잡는 경우
-- 해결: `pip install sqlalchemy` 후 인터프리터를 venv로 설정
-
-### 13-2) `FileNotFoundError: secrets.json`
-- 프로젝트 루트에 `secrets.json`이 없는 경우
-- 해결: `practice/secrets.json` 생성
-
-### 13-3) `OperationalError: Table ... doesn't exist`
-- 테이블 생성 전에 insert 요청한 경우
-- 해결: 서버 재시작(자동 생성) 또는 `Base.metadata.create_all()` 실행
-
-### 13-4) `CREATE command denied`
-- DB 사용자 권한 부족
-- 해결: CREATE 권한 부여 또는 root 계정 사용
-
-## 14) Workbench에서 데이터 확인
-1. Workbench 접속
-2. 왼쪽 하단 `Schemas` 탭 클릭
-3. DB 선택 → Tables 펼치기
-4. `detection_results` 우클릭 → `Select Rows - Limit 1000`
-
-
-
