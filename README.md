@@ -154,9 +154,5 @@ irm "http://127.0.0.1:8000/save-od" -Method Post -ContentType "application/json"
 3. DB 선택 → Tables 펼치기
 4. `detection_results` 우클릭 → `Select Rows - Limit 1000`
 
-## 15) 향후 확장 아이디어
-- Pydantic 스키마 분리 (`schemas.py`)
-- CRUD 모듈 분리
-- 조회/삭제/리스트 API 추가
-- 인증/권한 부여
+
 
